@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <HeaderMenu />
+    <HeaderMenu v-on:childToParent="onChildClick" />
+    <HelpView v-bind:visible="HelpViewFlag" v-on:childToParent="onChildClick" />
   </div>
 </template>
 
@@ -8,11 +9,23 @@
 import Vue from "vue";
 // import HelloWorld from "./components/HelloWorld.vue";
 import HeaderMenu from "./components/HeaderMenu.vue";
+import HelpView from "./components/HelpView.vue";
 
 export default Vue.extend({
   name: "App",
   components: {
-    HeaderMenu
+    HeaderMenu,
+    HelpView
+  },
+  data: function() {
+    return {
+      HelpViewFlag: false
+    };
+  },
+  methods: {
+    onChildClick(value: boolean) {
+      this.HelpViewFlag = value;
+    }
   }
 });
 </script>
@@ -25,5 +38,6 @@ export default Vue.extend({
   text-align: center;
   color: #2c3e50;
   margin-top: 0px;
+  height: 1000px; /*This shoud be dynamic*/
 }
 </style>
