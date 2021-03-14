@@ -1,16 +1,19 @@
+/* 
+    	#005A04	#CCFFBB	#3A5F0B	#005502 */
+
 body{
     margin:0;
 }
 .headermenu {
     top:0;
-    background-color: #222;
+    background-color:  #EEE;
     width:100%;
     overflow: hidden;
-    font-size:16px;
+    font-size:14px;
 }
 
 .headermenu a {
-    color:white;
+    color:black;
     float:left;
     text-align: center;
     padding: 16px 20px;
@@ -23,13 +26,13 @@ body{
 }
 
 .submenu .submenubtn {
-    color: white;
-    background-color: #222;
+    color: black;
+    background-color:  #EEE;
     text-decoration: underline;
     border:none;
     padding:16px 20px;
     margin:0;
-    font-size:16px;
+    font-size:14px;
 }
 
 .submenucontent {
@@ -37,19 +40,58 @@ body{
     position: absolute;
     left:0;
     width:100%;
-    z-index: 1;
+    z-index: 999;
 }
 
 .submenucontent a {
     float:left;
     text-decoration: none;
-    background-color: #666;
+    color:white;
+    background-color: #222;
+    border-right: 1px solid #222;
 }
 
 .headermenu a:hover, .submenu:hover .submenubtn {
-    background-color: #666;
+    background-color: #222;
+    color:white;
 }
 
 .submenu:hover .submenucontent {
     display:block;
 }
+
+.submenucontent a:hover {
+    color: #ccc;
+}
+
+.help-view {
+    z-index: 99;
+    position:absolute;
+    left:25%;
+    top:51px;
+    width: 50%;
+    min-height: 90%;
+    background-color: white;
+    margin-top:0px;
+    margin: 0px auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .helpview-title {
+      width:90%;
+      border-bottom: 1px solid #ccc;
+      margin:0px auto;
+      text-align: center;
+      padding:10px 0;
+  }
+  .helpview-title h1{
+      font-size:40px;
+  }
+
+  .helpview-description {
+    width: 70%;
+    text-align: left;
+    padding-top:50px;
+    margin:0px auto;
+  }
+  

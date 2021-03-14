@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <HeaderMenu v-on:childToParent="onChildClick" />
-    <HelpView v-bind:visible="HelpViewFlag" v-on:childToParent="onChildClick" />
+    <HeaderMenu v-on:childToParent="onChildClick"  v-on:changeHelpID="changeHelpIDParent" />
+    <h1>Welcome to this page</h1>
+    <HelpView v-bind:visible="HelpViewFlag" v-bind:helpID="HelpViewEntryID" v-on:childToParent="onChildClick"/>
   </div>
 </template>
 
@@ -19,12 +20,17 @@ export default Vue.extend({
   },
   data: function() {
     return {
-      HelpViewFlag: false
+      HelpViewFlag: false,
+      HelpViewEntryID: 0
     };
   },
   methods: {
     onChildClick(value: boolean) {
       this.HelpViewFlag = value;
+    },
+    changeHelpIDParent(value: number){
+      this.HelpViewFlag = true;
+      this.HelpViewEntryID = value;
     }
   }
 });

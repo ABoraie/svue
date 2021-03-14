@@ -1,6 +1,5 @@
 <template>
   <div class="headermenu">
-    <!-- {{ msg }} -->
     <a href="#home">Home</a>
     <div class="submenu">
       <button class="submenubtn">Stocks</button>
@@ -12,7 +11,7 @@
     <div class="submenu">
       <button class="submenubtn" v-on:click="emitToParent(true)">Help</button>
       <div class="submenucontent">
-        <a v-for="(testEntry, id) in testData" :key="id" href="#">
+        <a v-for="(testEntry, id) in testData" :key="id" href="#" v-on:click="emitHelpIDToParent(testEntry.id)">
           {{ testEntry.title }}
         </a>
       </div>
@@ -39,9 +38,6 @@ export default Vue.extend({
       testData: {}
     };
   },
-  created: function() {
-    console.log("Header menu was created");
-  },
   mounted() {
     axios.get("help-data.json").then(response => {
       this.testData = response.data.entries; //This is just to get the mock data from the json file
@@ -50,6 +46,9 @@ export default Vue.extend({
   methods: {
     emitToParent(value: boolean) {
       this.$emit("childToParent", value);
+    },
+    emitHelpIDToParent(value: number) {
+      this.$emit("changeHelpID", value)
     }
   }
 });

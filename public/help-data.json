@@ -1,14 +1,24 @@
 {
     "entries": [
         {
+            "id": 0,
+            "title": "Information About This Help Page",
+            "description": "This page just shows information regarding the help you will find here."
+        },
+        {
             "id": 1,
-            "title": "Test title",
-            "description": "This is just some test description"
+            "title": "Return On Investment (ROI)",
+            "description": "Return on investment (ROI) or return on costs (ROC) is a ratio between net income (over a period) and investment (costs resulting from an investment of some resources at a point in time). A high ROI means the investment's gains compare favourably to its cost. As a performance measure, ROI is used to evaluate the efficiency of an investment or to compare the efficiencies of several different investments. In economic terms, it is one way of relating profits to capital invested."
         },
         {
             "id": 2,
-            "title": "Test title2",
-            "description": "This is just some test description2"
+            "title": "Earnings Per Share (EPS)",
+            "description": "Earnings per share (EPS) is the monetary value of earnings per outstanding share of common stock for a company. In the United States, the Financial Accounting Standards Board (FASB) requires EPS information for the four major categories of the income statement: continuing operations, discontinued operations, extraordinary items, and net income. "
+        },
+        {
+            "id": 3,
+            "title": "Price–earnings ratio (P/E)",
+            "description": "The price-earnings ratio, also known as P/E ratio, P/E, or PER, is the ratio of a company's share (stock) price to the company's earnings per share. The ratio is used for valuing companies and to find out whether they are overvalued or undervalued."
         }
 ]
 
